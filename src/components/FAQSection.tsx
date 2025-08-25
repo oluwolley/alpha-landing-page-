@@ -47,7 +47,7 @@ const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 text-lg md:text-xl">
-            If you can't find the answers to your question below, please email{' '}
+            If you can&apos;t find the answers to your question below, please email{' '}
             <a href="mailto:help@alpha.ai" className="text-purple-600 hover:text-purple-700 underline transition-colors">
               help@alpha.ai
             </a>
