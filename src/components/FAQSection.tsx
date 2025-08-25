@@ -15,7 +15,7 @@ const FAQSection = () => {
     {
       id: 2,
       question: 'How do I start a free trial?',
-      answer: 'Simply click on the "Start free trial" button at the top of the page, create an account, and you\'ll get instant access to the platform.'
+      answer: 'Simply click on the "Start free trial" button at the top of the page, create an account, and you&apos;ll get instant access to the platform.'
     },
     {
       id: 3,

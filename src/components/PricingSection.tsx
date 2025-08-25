@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Check, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const PricingSection = () => {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -64,13 +64,13 @@ const PricingSection = () => {
     }
   ];
 
-  const getPrice = (plan: any) => {
+  const getPrice = (plan: typeof plans[0]) => {
     if (plan.monthlyPrice === null) return 'Custom';
     const price = isAnnual ? plan.annualPrice : plan.monthlyPrice;
     return `$${price}/${isAnnual ? 'Mo.' : 'Mo.'}`;
   };
 
-  const getSavings = (plan: any) => {
+  const getSavings = (plan: typeof plans[0]) => {
     if (plan.monthlyPrice === null) return null;
     const savings = Math.round(((plan.monthlyPrice - plan.annualPrice) / plan.monthlyPrice) * 100);
     return savings > 0 ? `Save ${savings}%` : null;

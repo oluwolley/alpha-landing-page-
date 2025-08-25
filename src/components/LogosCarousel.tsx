@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 const LogosCarousel = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -141,9 +142,11 @@ const LogosCarousel = () => {
                 key={`${logo.name}-${index}`}
                 className="flex-shrink-0 flex items-center justify-center min-w-[150px] md:min-w-[180px] h-16"
               >
-                <img
+                <Image
                   src={logo.src}
                   alt={`${logo.name} logo`}
+                  width={120}
+                  height={40}
                   className="h-6 md:h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>

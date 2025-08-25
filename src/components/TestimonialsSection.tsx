@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const TestimonialsSection = () => {
   const testimonials = [
     {
@@ -58,9 +60,11 @@ const TestimonialsSection = () => {
               {/* Avatar */}
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/20 group-hover:border-white/40 transition-colors duration-300">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={`${testimonial.name} avatar`}
+                    width={80}
+                    height={80}
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       // Fallback to a placeholder if image fails to load
@@ -72,7 +76,7 @@ const TestimonialsSection = () => {
 
               {/* Testimonial Text */}
               <blockquote className="text-white/90 italic text-base leading-relaxed mb-6 text-center min-h-[4.5rem] flex items-center justify-center">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </blockquote>
 
               {/* Customer Info */}
