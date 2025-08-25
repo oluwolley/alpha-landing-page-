@@ -297,8 +297,8 @@ const ProductPreview = ({ selectedTab = 0 }: ProductPreviewProps) => {
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
           {/* Header */}
-          <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
-            <div className="flex items-center justify-between">
+          <div className="bg-gray-50 px-4 md:px-6 py-4 border-b border-gray-200">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-2 md:space-y-0">
               <h3 className="text-lg font-semibold text-gray-800">{currentFeature.title}</h3>
               <div className="flex items-center space-x-2">
                 <currentFeature.icon className="w-5 h-5 text-gray-500" />
